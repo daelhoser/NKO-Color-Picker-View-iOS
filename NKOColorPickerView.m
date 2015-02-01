@@ -101,6 +101,7 @@ CGFloat const NKOPickerViewCrossHairshWidthAndHeight    = 38.f;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+<<<<<<< HEAD
     /*
      self.hueSatImage.frame = CGRectMake(NKOPickerViewDefaultMargin,
      NKOPickerViewDefaultMargin,
@@ -108,6 +109,15 @@ CGFloat const NKOPickerViewCrossHairshWidthAndHeight    = 38.f;
      CGRectGetHeight(self.frame) - NKOPickerViewGradientViewHeight - NKOPickerViewDefaultMargin - NKOPickerViewGradientTopMargin);
      */
     self.hueSatImage.frame = self.bounds;
+=======
+    
+    self.hueSatImage.frame = CGRectMake(NKOPickerViewDefaultMargin,
+                                        NKOPickerViewDefaultMargin,
+                                        CGRectGetWidth(self.frame) - (NKOPickerViewDefaultMargin*2),
+                                        CGRectGetHeight(self.frame) - NKOPickerViewGradientViewHeight - NKOPickerViewDefaultMargin - NKOPickerViewGradientTopMargin);
+    
+    
+>>>>>>> 6b4efa87c4139a5a9bf56fa9437268fb3132f033
     [self _updateBrightnessPosition];
     [self _updateCrosshairPosition];
 }
@@ -161,7 +171,11 @@ CGFloat const NKOPickerViewCrossHairshWidthAndHeight    = 38.f;
     
     CGPoint brightnessPosition;
     brightnessPosition.x = (1.0-currentBrightness);
+<<<<<<< HEAD
     //    brightnessPosition.y = self.gradientView.center.y;//daelhoser
+=======
+//    brightnessPosition.y = self.gradientView.center.y;//daelhoser
+>>>>>>> 6b4efa87c4139a5a9bf56fa9437268fb3132f033
 }
 
 - (void)_updateCrosshairPosition
@@ -236,8 +250,13 @@ CGFloat const NKOPickerViewCrossHairshWidthAndHeight    = 38.f;
 {
     if (CGRectContainsPoint(self.hueSatImage.frame,position)){
         self.crossHairs.center = position;
+<<<<<<< HEAD
         [self _updateHueSatWithMovement:position];
     }
+=======
+		[self _updateHueSatWithMovement:position];
+	}
+>>>>>>> 6b4efa87c4139a5a9bf56fa9437268fb3132f033
 }
 
 #pragma mark - Lazy loading
@@ -294,12 +313,15 @@ CGFloat const NKOPickerViewCrossHairshWidthAndHeight    = 38.f;
     return self->_crossHairs;
 }
 
+<<<<<<< HEAD
 
 -(void)setColorChangeBlock:(NKOColorPickerDidChangeColorBlock)didChangeColorBlock
 {
     self->_didChangeColorBlock = didChangeColorBlock;
 }
 
+=======
+>>>>>>> 6b4efa87c4139a5a9bf56fa9437268fb3132f033
 
 @end
 
