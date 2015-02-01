@@ -38,5 +38,8 @@ typedef void (^NKOColorPickerDidChangeColorBlock)(UIColor *color);
 
 - (id)initWithFrame:(CGRect)frame color:(UIColor*)color andDidChangeColorBlock:(NKOColorPickerDidChangeColorBlock)didChangeColorBlock;
 
+
+-(void)setColorChangeBlock:(NKOColorPickerDidChangeColorBlock)didChangeColorBlock;
+
 @end
 
